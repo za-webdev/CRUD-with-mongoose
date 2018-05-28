@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Profile</title>
+</head>
+<body>
+	<h1>Edit Your Profile Here</h1>
+	<form action="/users/<%=user._id%>/update" method="post">
+		<p>Animal Name:<input type="text" name="animal" value="<%=user.animal%>"></p>
+		<p>User Name:<input type="text" name="name" value="<%=user.name%>"></p>
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>

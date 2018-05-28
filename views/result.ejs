@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All mongoose</title>
+</head>
+<body>
+
+	<h1>All Mongoose Here</h1>
+	<table border="1">
+		<tr>
+			<th>Animal Name</th>
+			<th>Animal Breed</th>
+			<th>Posted By</th>
+			<th>Action</th>
+			<th>Remove</th>
+		</tr>
+			<% for (var x in users){ %>
+		<tr>
+			<td><%=users[x].animal%></td>
+			<td><%=users[x].breed%></td>
+			<td><%=users[x].name%></td>
+			<td>
+			<a href="/users/<%=users[x]._id%>">Show</a>
+			<a href="/edit/<%=users[x]._id%>">Edit</a>
+			</td>
+			<td>
+				<form action="/users/<%=users[x]._id%>/destroy" method='post'>
+				<input type="submit" value="Delete">
+				</form>
+			</td>
+
+		
+		
+			<%}%>
+		</tr>
+	
+	</table>
+
+
+	<a href="/take_me"> Add a new animal</a>
+
+
+
+</body>
+</html>
